@@ -2,9 +2,10 @@
     --white: #fff;
     --main-color:#9c2ac9;
     --primary-bg-color:#fff;
-    --secondary-bg-color:#eee;
+    --secondary-bg-color:rgb(230, 230, 230);
     --primary-text-color:#222;
     --secondary-text-color:#666;
+    --box-shadow: rgba(0, 0, 0, .2);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap');
@@ -43,6 +44,28 @@ html::-webkit-scrollbar-thumb{
 
 body{
     background: var(--secondary-bg-color);
+}
+
+section{
+    max-width: 85%;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 1rem;
+    padding: 0 8%;
+    background-color: var(--primary-bg-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: .9rem 3.5rem;
+    font-size: 1.5rem;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: .5rem;
+    box-shadow: .3rem .3rem rgba(221, 135, 255, 0.3);
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 #menu{
@@ -85,4 +108,183 @@ body{
 .navbar a:hover{
     color: var(--main-color);
     transform: translateX(1rem);
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home .image{
+    flex: 1 1 40rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+.home .image img{
+    max-width: 32rem;
+    height: 35rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    border-top: 2rem solid var(--primary-bg-color);
+    border-right: 2rem solid var(--primary-bg-color);
+    border-left: 2rem solid var(--main-color);
+    border-bottom: 2rem solid var(--main-color);
+    border-radius: .5rem;
+}
+
+
+.home .content{
+    flex: 1 1 50rem;
+    padding: 1rem;
+}
+
+.home .content>span{
+    display: inline-block;
+    padding: 1rem 0;
+    font-size: 2.6rem;
+    color: var(--secondary-text-color);
+}
+
+.home .content h3{
+    color: var(--primary-text-color);
+    font-size: 3.5rem;
+}
+
+.home .content h3 span{
+    color: var(--main-color);
+}
+
+.home .content a{
+    text-decoration: none;
+}
+
+
+
+.home .content a .btn:hover{
+    border: .2rem solid var(--main-color);
+    background: #fff;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.home .content p{
+    padding: 1rem 0;
+    color: var(--primary-text-color);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.home .content h4{
+    padding: .8rem 0;
+    color: var(--primary-text-color);
+    font-size: 1.4rem;
+    text-transform: none;
+    padding-bottom: 2rem;
+    line-height: 2rem;
+    font-weight: normal;
+}
+
+
+.techs .titulo{
+    text-align: center;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: var(--main-color);
+    font-weight: bolder;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+}
+
+.techs .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap:1.5rem;
+}
+
+.techs .container .card{
+    padding: 2.5rem;
+    background: var(--main-color);
+    border-radius: 5rem;
+    border: 1rem solid regba(0,0,0,.2);
+    box-shadow: inset 0 .5rem 1rem rgba(0, 0, 0, 1);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.techs .container .card:hover{
+    box-shadow: inset 0 -.5rem 1rem rgba(0, 0, 0, 1);
+}
+
+.techs .container .card img{
+    height: 15rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    box-shadow: 1px 1px 1rem #501766;
+    border-radius: 1.5rem;
+}
+
+.about .titulo{
+    text-align: center;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: var(--main-color);
+    font-weight: bolder;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+}
+
+.about .container{
+    display: block;
+}
+
+.about .projetos{
+    display: block;
+    width: 100%;
+}
+
+.about .projetos>h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--main-color);
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.about .projetos .card{
+    width: 100%;
+    min-height: 6rem;
+    border-radius: .5rem;
+    background: var(--secondary-bg-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.about .projetos .card>h3{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--main-color);
+    font-weight: bold;
+    padding-bottom: .3rem;
+}
+
+.about .projetos .card>p{
+    font-size: 1.2rem;
+    color: var(--secondary-text-color);
+    font-weight: normal;
+    padding-bottom: .3rem;
+}
+
+
+
+
+@media (min-width: 600px){
+    
+    .home .content h3{
+        font-size: 3rem;
+    }
 }
