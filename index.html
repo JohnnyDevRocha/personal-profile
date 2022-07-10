@@ -4,141 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Perfil</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css"/>
 </head>
 <body>
-    <header>
-        <div id="menu" class="fas fa-bars"></div>
-
-        <nav class="navbar">
-            <a href="#home">Introdução</a>
-            <a href="#techs">Conhecimento</a>
-            <a href="#exp">Experiência</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
     <section class="home" id="home">
-        <div class="image">
-            <img src="./img/photo.jpg" alt="JR-Photo">
+        <div class="card">
+            <div class="photo">
+                <img src="./img/photo.png" alt="Perfil">
+            </div>
+            <div class="content">
+                <div class="box">
+                    <span>Howdy!</span>
+                    <h3>Eu sou João Victor <span>(Johnny)</span></h3>
+                    <p>Programador focado em desenvolvimento</p>
+                    <h5>Web e Desktop</h5>
+                    <h4>Comecei criando pequenos jogos na Unity3D (c#), hoje sou apaixonado por programação, estou sempre estudando e desenvolvendo pequenos projetos pessoais.</h4>
+                    <a href="https://github.com/JohnnyDev2001"><button class="btn">CONTATOS</button></a>
+                </div>
+            </div>
         </div>
-        <div class="content">
-            <span>Ola!</span>
-            <h3>Eu sou <span>João Victor (Johnny)</span></h3>
-            <p>Programador focado em desenvolvimento Web e Desktop</p>
-            <h4>Tenho <idade></idade> anos e entrei na área da programação em 2016 quando comecei a desenvolver pequenos jogos utilizando C#(Unity3d), mas logo migrei para desenvolvimento web. Gosto de seguir padrões de projeto e metodologias de produção. Vejá alguns de meus projetos no meu portifolio:</h4>
-            <a href="https://github.com/JohnnyDev2001"><button class="btn">Portifolio</button></a>
-        </div>
-    </section>
-    <section class="techs" id="techs">
-        <div class="titulo">Tecnologias</div>
-        <div class="container">
-            <div class="card">
-                <div class="image">
-                    <img src="./img/02.png" alt="Python">
+        <div class="techs">
+            <div class="space">
+                <div class="imgL">
+                    <img src="./img/02.png" alt="">
                 </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="./img/01.png" alt="PosgreSQL">
+                <div class="imgL">
+                    <img src="./img/03.png" alt="">
                 </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="./img/03.png" alt="HTMLS">
+                <div class="imgL">
+                    <img src="./img/04.png" alt="">
                 </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="./img/04.png" alt="CSS">
+                <div class="imgL">
+                    <img src="./img/05.png" alt="">
                 </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="./img/05.png" alt="JS">
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="./img/07.png" alt="Flask">
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="./img/08.png" alt="GITHUB">
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="./img/10.png" alt="React">
+                <div class="imgL">
+                    <img src="./img/08.png" alt="">
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="exp" id="exp">
-        <div class="titulo">Experiência</div>
-        <div class="container">
-            <div class="bloco">
-                <h3>Projetos:</h3>
-                <div class="card">
-                    <h3>E-commerce(MusicSpace)</h3>
-                    <p>Foi um projeto desenvolvido no instituto federal em grupo - fiquei responsavel por todo backend e o projeto teve duração de 3 meses - foi usado php e mysql para o backend e bootstrap para o frontend - foi imprementado todo em MVC.</p>
-                </div>
-                <div class="card">
-                    <h3>Busca por Cep(fzip)</h3>
-                    <p>Foi um projeto pessoal desenvolvido com python - um modulo que utiliza 3 APIs para buscar um determinado cep - pode ser instalado usando 'pip install fzip'</p>
-                </div>
-            </div> 
-            <div class="bloco">
-                <h3>Formação:</h3>
-                <div class="card">
-                    <h3>Java e C#(unity)</h3>
-                    <p>Microway - 2016 - Concluido</p>
-                </div>
-                <div class="card">
-                    <h3>Informatica para internet</h3>
-                    <p>Instituto Federal - 2018/2019 - Concluido</p>
-                </div>
-            </div>
-        </div>       
-    </section>
-
-
-    <!-- data niver--->
-    <script>
-        const campo = document.querySelector('idade')
-        const ano = 2001;
-        const mes = 3;
-        const dia = 1;
-
-        function idade(ano_aniversario, mes_aniversario, dia_aniversario) {
-            var d = new Date,
-            ano_atual = d.getFullYear(),
-            mes_atual = d.getMonth() + 1,
-            dia_atual = d.getDate(),
-
-            ano_aniversario = +ano_aniversario,
-            mes_aniversario = +mes_aniversario,
-            dia_aniversario = +dia_aniversario,
-
-            quantos_anos = ano_atual - ano_aniversario;
-
-            if (mes_atual < mes_aniversario || mes_atual == mes_aniversario && dia_atual < dia_aniversario) {
-            quantos_anos--;
-            }
-
-            return quantos_anos < 0 ? 0 : quantos_anos;
-        }
-
-        campo.innerHTML = idade(ano, mes, dia);
-
-    </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/script.js"></script>
 </body>
 </html>

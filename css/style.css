@@ -1,11 +1,7 @@
 :root{
     --white: #fff;
-    --main-color:#9c2ac9;
-    --primary-bg-color:#fff;
-    --secondary-bg-color:rgb(230, 230, 230);
-    --primary-text-color:#222;
-    --secondary-text-color:#666;
-    --box-shadow: rgba(0, 0, 0, .2);
+    --main-color:#FFA800;
+    --main-bg-color: #020F0A;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap');
@@ -20,264 +16,135 @@
     transition: all .3s cubic-bezier(.38,1.15,.7,1.12);
 }
 
-*::selection{
-    background-color: var(--main-color);
-    color: var(--white);
-}
-
 html{
-    font-size: 62.5%;
+    font-size: 78%;
     overflow-x: hidden;
 }
 
-html::-webkit-scrollbar{
-    width: 1.3rem;
-}
-
-html::-webkit-scrollbar-track{
-    background-color: var(--secondary-bg-color);
-}
-
-html::-webkit-scrollbar-thumb{
-    background-color: var(--main-color);
-}
-
 body{
-    background: var(--secondary-bg-color);
-}
-
-section{
-    max-width: 85%;
-    width: 100%;
-    margin: 0 auto;
-    min-height: 100vh;
-    padding: 1rem;
-    padding: 0 8%;
-    background-color: var(--primary-bg-color);
-}
-
-.btn {
-    display: inline-block;
-    padding: .9rem 3.5rem;
-    font-size: 1.5rem;
-    background: var(--main-color);
-    color: #fff;
-    border-radius: .5rem;
-    box-shadow: .3rem .3rem rgba(221, 135, 255, 0.3);
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-#menu{
-    font-size: 2rem;
-    background: var(--main-color);
-    color: var(--white);
-    border-radius: 5rem;
-    height: 5rem;
-    width: 5rem;
-    text-align: center;
-    line-height: 5rem;
-    position: fixed;
-    top: 2rem; right: 2rem;
-    z-index: 1000;
-    cursor: pointer;
-}
-
-.navbar{
-    position: fixed;
-    top: 2.4rem; right: 2.5rem;
-    padding: 1.1rem 2rem;
-    padding-right: 4rem;
-    z-index: 999;
-    border: .2rem solid var(--main-color);
-    border-radius: 1rem;
-    background: var(--primary-bg-color);
-    opacity: 0;
-    transform-origin: top right;
-    transform: scale(0);
-}
-
-.navbar a{
-    display: block;
-    font-size: 2rem;
-    padding: 1rem;
-    padding-right: 7rem;
-    color: var(--primary-text-color);
-}
-
-.navbar a:hover{
-    color: var(--main-color);
-    transform: translateX(1rem);
+    background-color: var(--main-bg-color);
+    color:var(--white);
 }
 
 .home{
+    width: 100%;
+    max-width: 1270px;
+    height: 1vh;
+    margin: 20px auto;
+}
+
+.home .card{
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
 }
 
-.home .image{
-    flex: 1 1 40rem;
-    padding: 1rem;
+.home .card .photo{
+    min-width: 300px;
+    width: 50%;
+}
+
+.home .card .photo img{
+    width: 60%;
+    margin: auto;
+    display: block;
+}
+
+.home .card .content{
+    width: 50%;
+    margin: auto;
+    display: block;
+}
+
+.home .box{
+    max-width: 400px;
+    display: block;
+    margin: auto;
+}
+
+.home .card .content span{
+    font-size: 2.4rem;
+    color: var(--main-color);
+}
+
+.home .card .content h3{
+    font-size: 2.3rem;
+    font-weight: bold;
+    padding-top: 0.8rem;
+}
+
+.home .card .content h3>span{
+    font-size: 2.4rem;
+}
+
+.home .card .content p{
+    font-size: 1.3rem;
+    text-transform: uppercase;
     text-align: center;
+    font-weight: 300;
+    padding-top: 0.2rem;
 }
 
-
-.home .image img{
-    max-width: 32rem;
-    height: 35rem;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-    border-top: 2rem solid var(--primary-bg-color);
-    border-right: 2rem solid var(--primary-bg-color);
-    border-left: 2rem solid var(--main-color);
-    border-bottom: 2rem solid var(--main-color);
-    border-radius: .5rem;
+.home .card .content h5{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300;
 }
 
-
-.home .content{
-    flex: 1 1 50rem;
-    padding: 1rem;
+.home .card .content h4{
+    font-size: 1.2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    font-weight: 100;
+    text-transform: none;
 }
 
-.home .content>span{
-    display: inline-block;
-    padding: 1rem 0;
-    font-size: 2.6rem;
-    color: var(--secondary-text-color);
-}
-
-.home .content h3{
-    color: var(--primary-text-color);
-    font-size: 3.5rem;
-}
-
-.home .content h3 span{
-    color: var(--main-color);
-}
-
-.home .content a{
-    text-decoration: none;
-}
-
-
-
-.home .content a .btn:hover{
-    border: .2rem solid var(--main-color);
-    background: #fff;
-    color: var(--main-color);
+.home .card .content .btn{
+    margin: 0.5rem auto;
+    margin-bottom: 0;
+    display: block;
+    background-color: var(--main-color);
+    color: var(--white);
+    font-weight: bold;
+    padding: 0.8rem;
+    border-radius: 10px;
     cursor: pointer;
 }
 
-.home .content p{
-    padding: 1rem 0;
-    color: var(--primary-text-color);
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    font-weight: bold;
+.home .card .content .btn:hover{
+    background-color: var(--white);
+    color: #000;
 }
 
-.home .content h4{
-    padding: .8rem 0;
-    color: var(--primary-text-color);
-    font-size: 1.4rem;
-    text-transform: none;
-    padding-bottom: 2rem;
-    line-height: 2rem;
-    font-weight: normal;
+.home .techs{
+    width: 100%;
+    height: 80px;
+    display: block;
+    bottom: 0;
+    padding-bottom: 0;
 }
 
-
-.techs .titulo{
-    text-align: center;
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    color: var(--main-color);
-    font-weight: bolder;
-    padding-top: 4rem;
-    padding-bottom: 5rem;
+.home .techs .space{
+    padding-left: 10rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.techs .container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-    gap:1.5rem;
-}
-
-.techs .container .card{
-    padding: 2.5rem;
-    background: var(--main-color);
+.home .techs .space .imgL{
+    max-width: 65px;
+    height: 65px;
+    margin: 1rem;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 5rem;
-    border: 1rem solid regba(0,0,0,.2);
-    box-shadow: inset 0 .5rem 1rem rgba(0, 0, 0, 1);
-    position: relative;
-    overflow: hidden;
-    text-align: center;
+    box-shadow: 0 0 1em rgba(255, 255, 255, 0.2);
 }
 
-.techs .container .card:hover{
-    box-shadow: inset 0 -.5rem 1rem rgba(0, 0, 0, 1);
-}
-
-.techs .container .card img{
-    height: 15rem;
-    margin: 1rem 0;
-    padding: 1rem;
-    box-shadow: 1px 1px 1rem #501766;
-    border-radius: 1.5rem;
-}
-
-.exp .titulo{
-    text-align: center;
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    color: var(--main-color);
-    font-weight: bolder;
-    padding-top: 4rem;
-    padding-bottom: 5rem;
-}
-
-.exp .container{
-    display: block;
-}
-
-.exp .bloco{
-    display: block;
+.home .techs .space img{
     width: 100%;
-}
-
-.exp .bloco>h3{
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    color: var(--main-color);
-    font-weight: bold;
-    padding-bottom: 1rem;
-}
-
-.exp .bloco .card{
-    width: 100%;
-    min-height: 6rem;
-    border-radius: .5rem;
-    background: var(--secondary-bg-color);
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-.exp .bloco .card>h3{
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    color: var(--main-color);
-    font-weight: bold;
-    padding-bottom: .3rem;
-}
-
-.exp .bloco .card>p{
-    font-size: 1.2rem;
-    text-transform: none;
-    color: var(--secondary-text-color);
-    font-weight: normal;
-    padding-bottom: .3rem;
+    padding: 7px;
+    height: 100%;
 }
 
 
